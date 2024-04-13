@@ -1,3 +1,5 @@
+"use client";
+
 import React, { FC, ReactElement } from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 
@@ -10,6 +12,8 @@ export const Footer: FC = (): ReactElement => {
         backgroundColor: "secondary.main",
         paddingTop: "1rem",
         paddingBottom: "1rem",
+        position: "fixed",
+        bottom: 0,
       }}
     >
       <Container maxWidth="lg">
