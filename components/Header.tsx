@@ -18,7 +18,7 @@ import ClickAwayListener from "@mui/material/ClickAwayListener";
 
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import CommuneIcon from "../../public/img/logo/commune.gif";
+import CommuneIcon from "../public/img/logo/commune.gif";
 import Image from "next/image";
 import Grow from "@mui/material/Grow";
 import Paper from "@mui/material/Paper";
