@@ -27,6 +27,7 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import CustomButton from "./common/CustomButton";
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -37,6 +38,9 @@ export default function Header() {
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
   const anchorRef = React.useRef<HTMLButtonElement>(null);
   const [open, setOpen] = React.useState(false);
+  const [open0, setOpen0] = React.useState(false);
+  const [open1, setOpen1] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
 
   const handleToggle = () => {
     console.log("here");
@@ -45,9 +49,7 @@ export default function Header() {
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
+  
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
   };
@@ -60,8 +62,10 @@ export default function Header() {
   const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
-
-  const handleClose = (event: Event | React.SyntheticEvent) => {
+  const handleClick0 = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose0 = (event: Event | React.SyntheticEvent) => {
     if (
       anchorRef.current &&
       anchorRef.current.contains(event.target as HTMLElement)
@@ -69,9 +73,23 @@ export default function Header() {
       return;
     }
 
-    setOpen(false);
+    setOpen0(false);
   };
 
+  const handleClick1 = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose1 = (event: Event | React.SyntheticEvent) => {
+    if (
+      anchorRef.current &&
+      anchorRef.current.contains(event.target as HTMLElement)
+    ) {
+      return;
+    }
+
+    setOpen1(false);
+  };
+  
   function handleListKeyDown(event: React.KeyboardEvent) {
     if (event.key === "Tab") {
       event.preventDefault();
@@ -107,8 +125,8 @@ export default function Header() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Item1</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Item2</MenuItem>
     </Menu>
   );
 
@@ -165,87 +183,151 @@ export default function Header() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1, position: 'fixed', width : '100%' }}>
+    <Box
+      sx={{
+        flexGrow: 1,
+        backgroundColor: "#f1f5f9",
+        position: "fixed",
+        width: "100%",
+      }}
+    >
       <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <Image src={CommuneIcon} width={70} height={70} alt="logo" />
-          </IconButton>
-          <div>
-            <Button
-              id="basic-button"
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-              sx={{ color: "white" }}
-            >
-              Dashboard
-            </Button>
-            <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
-            >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
-            </Menu>
+        <Toolbar sx={{ backgroundColor: "#f1f5f9" }}>
+          <div className="flex w-full items-center justify-between">
+            <div className="flex justify-start gap-10 items-center">
+              <div>
+                <IconButton
+                  size="large"
+                  edge="start"
+                  color="inherit"
+                  aria-label="open drawer"
+                  sx={{ mr: 2 }}
+                >
+                  <Image src={CommuneIcon} width={50} height={50} alt="logo" />
+                </IconButton>
+              </div>
+              <div>
+                <Button
+                  id="basic-button"
+                  aria-controls={open0 ? "basic-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open0 ? "true" : undefined}
+                  onClick={handleClick0}
+                >
+                  Find Work
+                </Button>
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose0}
+                  MenuListProps={{
+                    "aria-labelledby": "basic-button",
+                  }}
+                >
+                  <MenuItem onClick={handleClose0}>Developer</MenuItem>
+                  <MenuItem onClick={handleClose0}>Investor</MenuItem>
+                  <MenuItem onClick={handleClose0}>Interseting</MenuItem>
+                </Menu>
+              </div>
+              <div>
+                <Button
+                  id="basic-button"
+                  aria-controls={open1 ? "basic-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open1 ? "true" : undefined}
+                  onClick={handleClick1}
+                >
+                  Modules
+                </Button>
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open1}
+                  onClose={handleClose1}
+                  MenuListProps={{
+                    "aria-labelledby": "basic-button",
+                  }}
+                >
+                  <MenuItem onClick={handleClose1}>Completed</MenuItem>
+                  <MenuItem onClick={handleClose1}>In Progress</MenuItem>
+                </Menu>
+              </div>
+            </div>
+            <div className="flex justify-between gap-10 items-center">
+              <div>
+                <Button
+                  id="basic-button"
+                  aria-controls={open2 ? "basic-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open2 ? "true" : undefined}
+                  onClick={handleClick1}
+                >
+                  Find Work
+                </Button>
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open2}
+                  onClose={handleClose1}
+                  MenuListProps={{
+                    "aria-labelledby": "basic-button",
+                  }}
+                >
+                  <MenuItem onClick={handleClose1}>Developer</MenuItem>
+                  <MenuItem onClick={handleClose1}>Investor</MenuItem>
+                  <MenuItem onClick={handleClose1}>Interseting</MenuItem>
+                </Menu>
+              </div>
+              <Box sx={{ flexGrow: 1 }} />
+              <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                <IconButton
+                  size="large"
+                  aria-label="show 4 new mails"
+                  color="success"
+                >
+                  <Badge badgeContent={4} color="error">
+                    <MailIcon />
+                  </Badge>
+                </IconButton>
+                <IconButton
+                  size="large"
+                  aria-label="show 17 new notifications"
+                  color="success"
+                >
+                  <Badge badgeContent={17} color="error">
+                    <NotificationsIcon />
+                  </Badge>
+                </IconButton>
+                <IconButton
+                  size="large"
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="primary"
+                >
+                  <AccountCircle />
+                </IconButton>
+              </Box>
+              <Box sx={{ display: { xs: "flex", md: "none" } }}>
+                <IconButton
+                  size="large"
+                  aria-label="show more"
+                  aria-controls={mobileMenuId}
+                  aria-haspopup="true"
+                  onClick={handleMobileMenuOpen}
+                  color="primary"
+                >
+                  <MoreIcon />
+                </IconButton>
+              </Box>
+              <Box sx={{ display: { xs: "flex", md: "none" } }}>
+                <CustomButton id= "login" label = "Login"/>
+              </Box>
+            </div>
           </div>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

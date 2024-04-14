@@ -13,7 +13,7 @@ export const Footer: FC = (): ReactElement => {
       sx={{
         width: "100%",
         height: "auto",
-        backgroundColor: "secondary.main",
+        backgroundColor: "#1f2937",
         paddingTop: "1rem",
         paddingBottom: "1rem",
         position: "fixed",
@@ -32,12 +32,12 @@ export const Footer: FC = (): ReactElement => {
             >
               <Image src={CommuneIcon} width={150} height={150} alt="logo" />
             </IconButton>
-            <Typography color="black" variant="h5">
+            <Typography color="white" variant="h5">
               Commune AI
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Typography color="textSecondary" variant="subtitle1">
+            <Typography color="white" variant="subtitle1">
               {`${new Date().getFullYear()} | In Development`}
             </Typography>
           </Grid>
