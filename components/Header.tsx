@@ -312,7 +312,7 @@ export default function Header() {
                 </IconButton>
               </Box>
               <Box sx={{display: 'flex', gap: 4}}>
-                <CustomButton id="login" label="Log in" />
+                <CustomButton id="signin" label="Sign In" />
                 <CustomButton id="signup" variant="contained" label="Sign Up" />
               </Box>
               <Box sx={{ display: { xs: "flex", md: "none" } }}>
