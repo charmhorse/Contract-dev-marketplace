@@ -49,7 +49,7 @@ export default function Header() {
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  
+
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
   };
@@ -89,7 +89,7 @@ export default function Header() {
 
     setOpen1(false);
   };
-  
+
   function handleListKeyDown(event: React.KeyboardEvent) {
     if (event.key === "Tab") {
       event.preventDefault();
@@ -311,6 +311,10 @@ export default function Header() {
                   <AccountCircle />
                 </IconButton>
               </Box>
+              <Box sx={{display: 'flex', gap: 4}}>
+                <CustomButton id="login" label="Log in" />
+                <CustomButton id="signup" variant="contained" label="Sign Up" />
+              </Box>
               <Box sx={{ display: { xs: "flex", md: "none" } }}>
                 <IconButton
                   size="large"
@@ -322,9 +326,6 @@ export default function Header() {
                 >
                   <MoreIcon />
                 </IconButton>
-              </Box>
-              <Box sx={{ display: { xs: "flex", md: "none" } }}>
-                <CustomButton id= "login" label = "Login"/>
               </Box>
             </div>
           </div>
