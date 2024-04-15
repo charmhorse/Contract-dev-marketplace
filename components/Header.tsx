@@ -28,6 +28,7 @@ import MenuList from "@mui/material/MenuList";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import CustomButton from "./common/CustomButton";
+import Link from "next/link";
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -311,9 +312,17 @@ export default function Header() {
                   <AccountCircle />
                 </IconButton>
               </Box>
-              <Box sx={{display: 'flex', gap: 4}}>
-                <CustomButton id="signin" label="Sign In" />
-                <CustomButton id="signup" variant="contained" label="Sign Up" />
+              <Box sx={{ display: "flex", gap: 4 }}>
+                <Link href={"/signin"}>
+                  <CustomButton id="signin" label="Sign In" />
+                </Link>
+                <Link href={"/signup"}>
+                  <CustomButton
+                    id="signup"
+                    variant="contained"
+                    label="Sign Up"
+                  />
+                </Link>
               </Box>
               <Box sx={{ display: { xs: "flex", md: "none" } }}>
                 <IconButton
