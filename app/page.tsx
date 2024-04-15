@@ -1,9 +1,11 @@
-'use client'
+"use client";
+
+import Layout from "@/layout/layout";
 
 export default function Home() {
   return (
     <main>
-     First Page
+      <Layout>First Page</Layout>
     </main>
   );
 }
