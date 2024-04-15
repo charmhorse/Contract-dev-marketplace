@@ -31,7 +31,7 @@ export default function RootLayout({
         {" "}
         <AppRouterCacheProvider>
           <LayoutProvider>
-            <Layout>{children}</Layout>
+           {children}
           </LayoutProvider>
         </AppRouterCacheProvider>
       </body>

@@ -14,12 +14,14 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Image from 'next/image';
+import CommuneIcon from "../../public/img/logo/commune.gif"
 
 function Copyright(props: any) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="https://communeai.org/">
         Commune marketplace
       </Link>{' '}
       {new Date().getFullYear()}
@@ -53,8 +55,8 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
+           <Avatar sx={{ m: 1, backgroundColor: 'unset',width : 80, height: 80 }} >
+            <Image src={CommuneIcon} alt='commune logo'/>
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign in
@@ -99,7 +101,7 @@ export default function SignIn() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

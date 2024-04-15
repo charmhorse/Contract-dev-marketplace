@@ -1,5 +1,7 @@
+import Layout from "@/layout/layout";
+
 const View = () => {
-  return <>This is View Dashboard Page</>;
+  return <Layout>This is View Dashboard Page</Layout>;
 }; 
 
 export default View;
