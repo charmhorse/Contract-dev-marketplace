@@ -1,4 +1,4 @@
-import { Box, styled, Tooltip } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import Link from 'src/components/Link';
 
 const LogoWrapper = styled(Link)(
@@ -74,31 +74,31 @@ const LogoSignInner = styled(Box)(
 `
 );
 
-const LogoTextWrapper = styled(Box)(
-  ({ theme }) => `
-        padding-left: ${theme.spacing(1)};
-`
-);
+// const LogoTextWrapper = styled(Box)(
+//   ({ theme }) => `
+//         padding-left: ${theme.spacing(1)};
+// `
+// );
 
-const VersionBadge = styled(Box)(
-  ({ theme }) => `
-        background: ${theme.palette.success.main};
-        color: ${theme.palette.success.contrastText};
-        padding: ${theme.spacing(0.4, 1)};
-        border-radius: ${theme.general.borderRadiusSm};
-        text-align: center;
-        display: inline-block;
-        line-height: 1;
-        font-size: ${theme.typography.pxToRem(11)};
-`
-);
+// const VersionBadge = styled(Box)(
+//   ({ theme }) => `
+//         background: ${theme.palette.success.main};
+//         color: ${theme.palette.success.contrastText};
+//         padding: ${theme.spacing(0.4, 1)};
+//         border-radius: ${theme.general.borderRadiusSm};
+//         text-align: center;
+//         display: inline-block;
+//         line-height: 1;
+//         font-size: ${theme.typography.pxToRem(11)};
+// `
+// );
 
-const LogoText = styled(Box)(
-  ({ theme }) => `
-        font-size: ${theme.typography.pxToRem(15)};
-        font-weight: ${theme.typography.fontWeightBold};
-`
-);
+// const LogoText = styled(Box)(
+//   ({ theme }) => `
+//         font-size: ${theme.typography.pxToRem(15)};
+//         font-weight: ${theme.typography.fontWeightBold};
+// `
+// );
 
 function Logo() {
   return (
