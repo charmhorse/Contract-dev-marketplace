@@ -114,12 +114,6 @@ function Logo() {
           display: { xs: 'none', sm: 'inline-block' }
         }}
       >
-        <LogoTextWrapper>
-          <Tooltip title="Version 1.0" arrow placement="right">
-            <VersionBadge>1.0</VersionBadge>
-          </Tooltip>
-          <LogoText>Tokyo Free White</LogoText>
-        </LogoTextWrapper>
       </Box>
     </LogoWrapper>
   );

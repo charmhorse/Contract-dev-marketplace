@@ -105,9 +105,8 @@ function Hero() {
         container
       >
         <Grid item md={10} lg={8} mx="auto">
-          <LabelWrapper color="success">Version 1.0.0</LabelWrapper>
           <TypographyH1 sx={{ mb: 2 }} variant="h1">
-            Tokyo Free White Next.js Typescript Admin Dashboard
+            Contract for the development
           </TypographyH1>
           <TypographyH2
             sx={{ lineHeight: 1.5, pb: 4 }}
@@ -115,9 +114,7 @@ function Hero() {
             color="text.secondary"
             fontWeight="normal"
           >
-            High performance React template built with lots of powerful
-            Material-UI components across multiple product niches for fast &
-            perfect apps development processes
+            High-skilled devlopers and others can use this marketplace and you can make the contract with commune.
           </TypographyH2>
           <Button
             component={Link}
@@ -125,18 +122,7 @@ function Hero() {
             size="large"
             variant="contained"
           >
-            Browse Live Preview
-          </Button>
-          <Button
-            sx={{ ml: 2 }}
-            component="a"
-            target="_blank"
-            rel="noopener"
-            href="https://bloomui.com/product/tokyo-free-white-nextjs-typescript-material-ui-admin-dashboard/"
-            size="large"
-            variant="text"
-          >
-            Key Features
+            Get Started
           </Button>
           <Grid container spacing={3} mt={5}>
             <Grid item md={4}>

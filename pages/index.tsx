@@ -38,7 +38,7 @@ function Overview() {
   return (
     <OverviewWrapper>
       <Head>
-        <title>Tokyo Free White NextJS Typescript Admin Dashboard</title>
+        <title>Dashboard</title>
       </Head>
       <HeaderWrapper>
         <Container maxWidth="lg">
@@ -58,7 +58,7 @@ function Overview() {
                   variant="contained"
                   sx={{ ml: 2 }}
                 >
-                  Live Preview
+                  Get Statred
                 </Button>
               </Box>
             </Box>
@@ -70,11 +70,11 @@ function Overview() {
         <Typography textAlign="center" variant="subtitle1">
           Crafted by{' '}
           <Link
-            href="https://bloomui.com"
+            href="https://communeai.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            BloomUI.com
+            Commune
           </Link>
         </Typography>
       </Container>

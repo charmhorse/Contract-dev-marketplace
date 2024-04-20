@@ -7,6 +7,7 @@ import {
   styled,
   useTheme
 } from '@mui/material';
+import Image from 'next/image';
 import Link from 'src/components/Link';
 
 const LogoWrapper = styled(Link)(
@@ -95,32 +96,13 @@ const TooltipWrapper = styled(({ className, ...props }: TooltipProps) => (
 }));
 
 function Logo() {
-  const theme = useTheme();
-
   return (
     <TooltipWrapper
-      title="Tokyo Free White Next.js Typescript Admin Dashboard"
+      title="Dashboard"
       arrow
     >
       <LogoWrapper href="/">
-        <Badge
-          sx={{
-            '.MuiBadge-badge': {
-              fontSize: theme.typography.pxToRem(11),
-              right: -2,
-              top: 8
-            }
-          }}
-          overlap="circular"
-          color="success"
-          badgeContent="1.0"
-        >
-          <LogoSignWrapper>
-            <LogoSign>
-              <LogoSignInner />
-            </LogoSign>
-          </LogoSignWrapper>
-        </Badge>
+        <img src={'static/images/logo/logo.gif'} width={80} height={80} alt='commune logo'/>
       </LogoWrapper>
     </TooltipWrapper>
   );
