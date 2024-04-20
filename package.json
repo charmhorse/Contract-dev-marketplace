@@ -1,11 +1,11 @@
 {
-  "name": "contract-dev-marketplace",
+  "name": "tokyo-free-white-nextjs-admin-dashboard",
   "version": "1.0.0",
-  "title": "The marketplace to communicate and make the contract with developer",
-  "description": "This markteplace is for communicating and making the contract with developer for commune",
+  "title": "Tokyo Free White NextJS Typescript Admin Dashboard",
+  "description": "High performance React template built with lots of powerful MUI (Material-UI) components across multiple product niches for fast & perfect apps development processes",
   "author": {
-    "name": "fam",
-    "url": "https://fam@example.com"
+    "name": "BloomUI.com",
+    "url": "https://bloomui.com"
   },
   "private": false,
   "dependencies": {
